@@ -1,0 +1,11 @@
+stock_homepage:
+    path:     /stock
+    defaults: { _controller: StockBundle:Default:index }
+stock_show:
+    path:     /stock/{id}/{annee}/{titre}
+    defaults: { _controller: StockBundle:Default:show }
+    requirements:
+        id: \d+
+        annee: \d{4}
+        titre: "[a-zA-Z]+"
+
